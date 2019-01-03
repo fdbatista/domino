@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3815C4F1-088D-4D2F-9C4C-E30A0E79F5B0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ControlDomino</RootNamespace>
+    <AssemblyName>ControlDomino</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>..\..\..\Imágenes\Iconos\Juegos\Domino.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\ClaseControl.cs" />
+    <Compile Include="Clases\HiloEjecucion.cs" />
+    <Compile Include="Clases\HistorialELO.cs" />
+    <Compile Include="Clases\Jugador.cs" />
+    <Compile Include="Clases\ListaClaseControl.cs" />
+    <Compile Include="Clases\MiembrosEstaticos.cs" />
+    <Compile Include="Clases\Parametros.cs" />
+    <Compile Include="Clases\Pareja.cs" />
+    <Compile Include="Clases\Partido.cs" />
+    <Compile Include="Clases\Record.cs" />
+    <Compile Include="Clases\RegistroJugador.cs" />
+    <Compile Include="Clases\RegistroPartido.cs" />
+    <Compile Include="Clases\ReproductorAudio.cs" />
+    <Compile Include="Clases\ResultBusq.cs" />
+    <Compile Include="Clases\Sonido.cs" />
+    <Compile Include="frmAcercaDe.cs" />
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActJuego.cs" />
+    <Compile Include="frmActJuego.Designer.cs">
+      <DependentUpon>frmActJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActJug.cs" />
+    <Compile Include="frmActJug.Designer.cs">
+      <DependentUpon>frmActJug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActSonidos.cs" />
+    <Compile Include="frmActSonidos.Designer.cs">
+      <DependentUpon>frmActSonidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdicJug.cs" />
+    <Compile Include="frmAdicJug.Designer.cs">
+      <DependentUpon>frmAdicJug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCambiarPass.cs" />
+    <Compile Include="frmCambiarPass.Designer.cs">
+      <DependentUpon>frmCambiarPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompJug.cs" />
+    <Compile Include="frmCompJug.Designer.cs">
+      <DependentUpon>frmCompJug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarListas.cs" />
+    <Compile Include="frmEditarListas.Designer.cs">
+      <DependentUpon>frmEditarListas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarParametros.cs" />
+    <Compile Include="frmEditarParametros.Designer.cs">
+      <DependentUpon>frmEditarParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstadIndiv.cs" />
+    <Compile Include="frmEstadIndiv.Designer.cs">
+      <DependentUpon>frmEstadIndiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstadParejas.cs" />
+    <Compile Include="frmEstadParejas.Designer.cs">
+      <DependentUpon>frmEstadParejas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerico.cs" />
+    <Compile Include="frmGenerico.Designer.cs">
+      <DependentUpon>frmGenerico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGraficoRendimiento.cs" />
+    <Compile Include="frmGraficoRendimiento.Designer.cs">
+      <DependentUpon>frmGraficoRendimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrupoElite.cs" />
+    <Compile Include="frmGrupoElite.Designer.cs">
+      <DependentUpon>frmGrupoElite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJuegoNuevo.cs" />
+    <Compile Include="frmJuegoNuevo.Designer.cs">
+      <DependentUpon>frmJuegoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaNegra.cs" />
+    <Compile Include="frmListaNegra.Designer.cs">
+      <DependentUpon>frmListaNegra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParamsCorreo.cs" />
+    <Compile Include="frmParamsCorreo.Designer.cs">
+      <DependentUpon>frmParamsCorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs" />
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProspectos.cs" />
+    <Compile Include="frmProspectos.Designer.cs">
+      <DependentUpon>frmProspectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecords.cs" />
+    <Compile Include="frmRecords.Designer.cs">
+      <DependentUpon>frmRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecordsIndiv.cs" />
+    <Compile Include="frmRecordsIndiv.Designer.cs">
+      <DependentUpon>frmRecordsIndiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clases" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActJuego.resx">
+      <DependentUpon>frmActJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActJug.resx">
+      <DependentUpon>frmActJug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActSonidos.resx">
+      <DependentUpon>frmActSonidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdicJug.resx">
+      <DependentUpon>frmAdicJug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarPass.resx">
+      <DependentUpon>frmCambiarPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompJug.resx">
+      <DependentUpon>frmCompJug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarListas.resx">
+      <DependentUpon>frmEditarListas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarParametros.resx">
+      <DependentUpon>frmEditarParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadIndiv.resx">
+      <DependentUpon>frmEstadIndiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadParejas.resx">
+      <DependentUpon>frmEstadParejas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerico.resx">
+      <DependentUpon>frmGenerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraficoRendimiento.resx">
+      <DependentUpon>frmGraficoRendimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrupoElite.resx">
+      <DependentUpon>frmGrupoElite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJuegoNuevo.resx">
+      <DependentUpon>frmJuegoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaNegra.resx">
+      <DependentUpon>frmListaNegra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParamsCorreo.resx">
+      <DependentUpon>frmParamsCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProspectos.resx">
+      <DependentUpon>frmProspectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecords.resx">
+      <DependentUpon>frmRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordsIndiv.resx">
+      <DependentUpon>frmRecordsIndiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
